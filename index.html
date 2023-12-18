@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aquamarine;">
+    <ul class="lang">
+        <li>Java</li>
+    </ul>
+</body>
+<script>
+    function al(ln){
+        const li = document.createElement('li');
+        li.innerHTML = ln
+        document.querySelector('.lang').appendChild(li)
+    }
+    al("python")
+    al('Express js')
+    al('typescript')
+
+    function aal(ln){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(ln));
+        document.querySelector('.lang').appendChild(li);
+    }
+    aal("DSA")
+
+    const sec = document.querySelector("li:nth-child(2)")
+    sec.textContent = "Cpp"
+
+    const nl = document.createElement('li')
+    nl.textContent = "Rust"
+    sec.replaceWith(nl)
+
+    const fir = document.querySelector("li:first-child")
+    fir.innerHTML = "Golang"
+
+    const la = document.querySelector('li:last-child')
+    la.remove()
+</script>
+</html>
